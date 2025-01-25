@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin OTP Generation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+        input, button {
+            padding: 8px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Admin OTP Generation</h1>
+    <button onclick="generateOTP()">Generate OTP</button>
+    <p id="otpMessage"></p>
+    <p>Generated OTP: <span id="generatedOTP"></span></p>
+
+    <script>
+        function generateOTP() {
+            // Generate a random 6-digit OTP
+            const OTP = Math.floor(100000 + Math.random() * 900000);
+            // Store OTP in localStorage (for demo purposes; in real apps, save to DB)
+            localStorage.setItem('adminOTP', OTP);
+            document.getElementById('generatedOTP').textContent = OTP;  // Display OTP for demo purposes
+            document.getElementById('otpMessage').textContent = "OTP generated successfully!";
+        }
+    </script>
+
+</body>
+</html>
