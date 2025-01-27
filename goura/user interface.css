@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+    background-image: url("user\ interface.jpg");
+    color: #fff;
+}
+.wrapper{
+    width: 1170px;
+    margin: auto;
+    float: none;
+}
+.logo img{
+    width: 100px;
+    float: inline-start;
+    height: auto;
+    
+}
